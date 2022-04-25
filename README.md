@@ -1,7 +1,7 @@
 # Semantic Mapping - Client (ROS)
 
 ## Requirements
-- [ViMantic - Server](https://github.com/MAPIRlab/Semantic-Mapping-Server)
+- [Semantic Mapping - Server](https://github.com/MAPIRlab/Semantic-Mapping-Server)
 - [RosBridge](http://wiki.ros.org/rosbridge_suite)
 - [Detectron2](https://github.com/DavidFernandezChaves/Detectron2_ros) (Replaceable) 
 
