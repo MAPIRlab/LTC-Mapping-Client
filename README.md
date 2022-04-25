@@ -1,45 +1,14 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/DavidFernandezChaves/ViMantic-Unity3DNode/master/Textures/Vimantic.gif" alt="ViMantic" width="400" height="200"/>
-</div>
-
-# ViMantic Client (ROS)
-ViMantic is a distributed architecture for semantic mapping of environments using mobile robots. For this, we have used Unity to create virtual environments that represent the information obtained from the real environment. This architecture is composed of one or several clients (robots/agents) and a server.
-
-## Features
-- Use an ontology as a formal and clear model to accommodate semantic information, including also mechanisms for its manipulation, i.e. insertion, modification or query.
-- The model is automatically populated, i.e. it has a method to transform sensory data into high-level information, e.g. by recognizing objects.
-- ViMantic uses 3D virtual maps to represent the semantic knowledge acquired.
+# Semantic Mapping - Client (ROS)
 
 ## Requirements
-- [ViMantic - Server](https://github.com/DavidFernandezChaves/ViMantic-Server)
+- [ViMantic - Server](https://github.com/MAPIRlab/Semantic-Mapping-Server)
 - [RosBridge](http://wiki.ros.org/rosbridge_suite)
 - [Detectron2](https://github.com/DavidFernandezChaves/Detectron2_ros) (Replaceable) 
 
-This software uses [Detectron2](https://github.com/DavidFernandezChaves/Detectron2_ros) as object recognizer. However, this architecture can be easily modified to use other object recognition systems.
+Our method uses [Detectron2](https://github.com/DavidFernandezChaves/Detectron2_ros) as object detector. However, this architecture can be easily modified to use other object detection methods.
 
-## Process
-This node uses the Detectron2 to recognize objects in RGB images. It then extracts the point clouds of each detected object from a depth image. The point clouds are processed to try to fit the object and eliminate spurious points. Finally the information of the detected objects is sent to the architecture server.
-
-## Parameters
-```bash
-        #Name of the topic where the results are published
-        <param name="topic_result" value="ViMantic/Detections"/>
-        
-        #Topic name where the RGB image is obtained
-	<param name="topic_intensity" value="RGBD_4_intensity"/>
-	    
-        #Topic name where the depth image is obtained
-        <param name="topic_depth" value="RGBD_4_depth"/>
-        
-        #Topic name of CNN input
-        <param name="topic_republic" value="ViMantic/ToCNN"/>	
-	
-	#Minimum object size 
-        <param name="min_size" value="0.05"/>
-        
-        #Topic name of CNN results
-        <param name="topic_cnn" value="detectron2_ros/result"/>       
-        
-        #Enables debug mode
-	<param name="debug" value="true"/>
-```
+## Example
+Result obtained using [Robot@VirtualHome](https://github.com/DavidFernandezChaves/RobotAtVirtualHome):
+<div align="center">
+  <img src="https://github.com/MAPIRlab/Semantic-Mapping-Server/blob/master/Textures/example_semantic_mapping.png?raw=true"/>
+</div>
