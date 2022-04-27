@@ -10,5 +10,5 @@ Our method uses [Detectron2](https://github.com/DavidFernandezChaves/Detectron2_
 ## Example
 Result obtained using [Robot@VirtualHome](https://github.com/DavidFernandezChaves/RobotAtVirtualHome):
 <div align="center">
-  <img src="https://github.com/MAPIRlab/Semantic-Mapping-Server/blob/master/Textures/example_semantic_mapping.png?raw=true"/>
+  <img src="https://github.com/MAPIRlab/LTC-Mapping-Server/blob/master/Textures/example_semantic_mapping.png?raw=true"/>
 </div>
