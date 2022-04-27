@@ -1,7 +1,7 @@
-# Semantic Mapping - Client (ROS)
+# LTC-Mapping - Client (ROS)
 
 ## Requirements
-- [Semantic Mapping - Server](https://github.com/MAPIRlab/Semantic-Mapping-Server)
+- [LTC-Mapping - Server](https://github.com/MAPIRlab/LTC-Mapping-Server)
 - [RosBridge](http://wiki.ros.org/rosbridge_suite)
 - [Detectron2](https://github.com/DavidFernandezChaves/Detectron2_ros) (Replaceable) 
 
